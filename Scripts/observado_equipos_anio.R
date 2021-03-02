@@ -36,6 +36,7 @@ observado_equipos_anio<- function(team,year){
       filter(Date != c("Playoffs"))
     
     data<-select(data,-c(Boxscore,OT))
+    data$Local<-c(team)
     
   #Guardando el archivo por equipo por año
     directorio<-paste0("~/Documents/R/NFL/NFL/DB/Observado/",team)
